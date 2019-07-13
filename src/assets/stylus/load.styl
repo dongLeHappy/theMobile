@@ -1,0 +1,105 @@
+.loading-status
+    width 100px
+    height 100px
+    background rgba(0,0,0,0.8)
+    position fixed
+    left 50%
+    top 50%
+    margin-top -50px
+    margin-left -50px
+    border-radius 5px
+    z-index 100001
+    .load-content 
+        width 60px
+        height 60px
+        position absolute
+        left 50%
+        margin-left -30px
+        top 50%
+        margin-top -40px
+        z-index: 11
+    .load-content 
+        div 
+            content ''
+            position absolute
+            width 16px
+            height 16px
+            background #ff8c00
+            top 10px
+            left 10px
+            transform-origin 20px 20px
+            border-radius 8px
+            animation spin-a 2s infinite cubic-bezier(0.5, 0, 0.5, 1)
+    .load-content 
+        .c2 
+            top 1px
+            left auto
+            right 1px
+            transform-origin -4px 20px
+            animation spin-b 2s infinite cubic-bezier(0.5, 0, 0.5, 1)
+    .load-content 
+        .c3 
+            top auto
+            left auto
+            right 1px
+            bottom 1px
+            transform-origin -4px -4px
+            animation spin-c 2s infinite cubic-bezier(0.5, 0, 0.5, 1)
+    .load-content 
+        .c4 
+            top auto
+            bottom 10px
+            transform-origin 20px -4px
+            animation spin-d 2s infinite cubic-bezier(0.5, 0, 0.5, 1)
+.bg
+    background rgba(0,0,0,0.6)
+    left 0
+    top 0
+    filter "Alpha(opacity=60)"
+    opacity 0.8
+    display block
+    width 100%
+    position fixed
+    top 0
+    z-index 10
+    width 100%
+    height 100%
+@keyframes spin-a
+    0%   { transform: rotate(90deg) }
+    0%  { transform: rotate(90deg) }
+    50%  { transform: rotate(180deg) }
+    75%  { transform: rotate(270deg) }
+    100% { transform: rotate(360deg) }
+@keyframes spin-b 
+    0%   { transform: rotate(90deg) }
+    25%  { transform: rotate(90deg) }
+    25%  { transform: rotate(180deg) }
+    75%  { transform: rotate(270deg) }
+    100% { transform: rotate(360deg) }
+
+@keyframes spin-c 
+    0%   { transform: rotate(90deg) }
+    25%  { transform: rotate(90deg) }
+    50%  { transform: rotate(180deg) }
+    50%  { transform: rotate(270deg) }
+    100% { transform: rotate(360deg) }
+
+@keyframes spin-d
+    0%   { transform: rotate(90deg) }
+    25%  { transform: rotate(90deg) }
+    50%  { transform: rotate(180deg) }
+    75%  { transform: rotate(270deg) }
+    75%  { transform: rotate(360deg) }
+    100% { transform: rotate(360deg) }
+.loading-status 
+    span
+        width 100px
+        height 30px
+        position absolute
+        left 50%
+        margin-left -50px
+        top 50%
+        margin-top 20px
+        color #ff8c00
+        font-size 12px
+        text-align center
